@@ -15,8 +15,6 @@ print(b)
 print("ok")
 
 
-b="fewfwef  fwef    fwefew"
-
 
 tokens = TextBlob(b)
 a= tokens.tags
@@ -27,7 +25,7 @@ with open('lib/assets/python/medical.txt') as file:
 
 
 
-filtered = [t for t in tagged if t[1] == "NN" or t[1] == "JJ"]
+filtered = [t for t in a if t[1] == "NN" or t[1] == "JJ"]
 
 new=[]
 for i in range(len(filtered)):
