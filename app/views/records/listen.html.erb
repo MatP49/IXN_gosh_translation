@@ -1,0 +1,98 @@
+
+
+<h1 id="myHeader"> Speech recognition </h1>
+
+
+
+
+
+
+        <body>
+       
+<div class="container">
+  <div class="row">
+    <div class="text-center align-self-center col-sm-4">
+  <a href="/records/listen">Stop</a>
+
+    </div>
+    <div class="text-center align-self-center col-sm-4">
+     <button onclick="start()"  style="margin:auto;display:block"> <%= image_tag "play.png",  width: "60%", class: "mx-auto d-block", :alt => "avatar" %></button>
+    </div>
+    <div class="text-center align-self-center col-sm-4" >
+        <a href="/records/new"  onclick="return copyDivToClipboard();" style="text-align:center">Start reviewing</a>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+        
+        <div type="text" id="result"></div>
+      
+
+<pre><%=result=`python3 lib/assets/python/nlp.py`%> </pre>
+
+         </body>
+
+
+
+
+
+
+
+
+        <script type="application/javascript">
+            function start(){
+                var r = document.getElementById("result");
+            if("webkitSpeechRecognition" in window){
+                var speechRecognizer = new webkitSpeechRecognition();
+                speechRecognizer.continuous = true;
+                speechRecognizer.interimResults = true;
+                speechRecognizer.lang = "en-US";
+                speechRecognizer.start();
+                
+                var finalTranscripts = "";
+                speechRecognizer.onresult = function(event){
+                    var interimTranscripts = "";
+                    for(var i=event.resultIndex; i<event.results.length; i++){
+                        var transcript = event.results[i][0].transcript;
+                        transcript.replace("\n", "<br>");
+                        if(event.results[i].isFinal){
+                            finalTranscripts += transcript;
+                        }
+                        else{
+                            interimTranscripts += transcript;
+                        }
+                        r.innerHTML = finalTranscripts + '<span style="color: #999;">' + interimTranscripts + '</span>';
+
+                    }
+                };
+                speechRecognizer.onerror = function(event){
+                };
+            }
+            else{
+                r.innerHTML = "Your browser does not support that.";
+            }
+            }
+
+       function copyDivToClipboard() {
+                    var range = document.createRange();
+                    range.selectNode(document.getElementById("result"));
+                    window.getSelection().removeAllRanges(); // clear current selection
+                    window.getSelection().addRange(range); // to select text
+                    document.execCommand("copy")
+                    window.getSelection().removeAllRanges();// to deselect
+
+                }
+
+        </script>
+    </head>
+   
+
+
+
+</html>
