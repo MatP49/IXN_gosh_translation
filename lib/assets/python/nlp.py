@@ -36,11 +36,17 @@ final=list(set(final))
 from textblob import Word
 
 print("ok")
-text = open("transcript.txt")
-for i in final:
-	print(Word(i).definitions)
-	f.write(Word(i).definitions)
 
+
+text2=[]
+for i in final:
+	word = Word(i).definitions
+	print(Word(i).definitions)
+	text2.append(word)
 
 print("ok")
-f.close()
+
+with open("transcript.txt", "a") as myfile:
+    myfile.write(text2)
+
+    print("ok")
