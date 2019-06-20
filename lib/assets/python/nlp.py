@@ -43,9 +43,10 @@ print(final)
 
 from textblob import Word
 
-
+print("ok")
 
 for i in final:
 	word = Word(i)
+	print("ok")
     defr = Word("octopus").definitions
     print(i+": "+ defr + "\n")
