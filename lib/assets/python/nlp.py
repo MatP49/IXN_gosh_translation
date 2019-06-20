@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
-import requests
 import nltk
-import clipboard
 from nltk.corpus import wordnet
 print("ok")
 
