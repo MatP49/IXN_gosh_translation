@@ -1,12 +1,17 @@
 #!/usr/bin/env python3
-import nltk
-from nltk.corpus import wordnet
+
+from textblob import TextBlob
 print("ok")
 
 text = open("transcript.txt")
 print("ok")
 b=text.read()
 print(b)
+
+
+tokens = TextBlob(text)
+print(tokens)
+print(blob.tags) 
 #tokens = nltk.word_tokenize(b)
 tagged = nltk.pos_tag(tokens)
 print(tokens)
