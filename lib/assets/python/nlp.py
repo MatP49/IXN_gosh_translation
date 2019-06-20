@@ -46,5 +46,4 @@ from textblob import Word
 print("ok")
 
 for i in final:
-	word = Word(i)
-	print(Word("octopus").definitions)
+	print(Word(i).definitions)
