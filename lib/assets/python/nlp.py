@@ -7,12 +7,14 @@ text = open("transcript.txt")
 print("ok")
 b=text.read()
 print(b)
-tokens = nltk.word_tokenize(b)
-tagged = nltk.pos_tag(tokens)
-print(tokens)
-print(tagged)
+#tokens = nltk.word_tokenize(b)
+#tagged = nltk.pos_tag(tokens)
+#print(tokens)
+#print(tagged)
 with open('lib/assets/python/medical.txt') as file:
     medical_list = [i.strip() for i in file]
+
+print(medical_list)
 
 filtered = [t for t in tagged if t[1] == "NN" or t[1] == "JJ"]
 
