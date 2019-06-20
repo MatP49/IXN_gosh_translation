@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+import nltk
+nltk.download('punkt')
 from textblob import TextBlob
 print("ok")
 
@@ -9,7 +11,6 @@ b=text.read()
 print(b)
 
 
-from textblob import TextBlob
 print("ok")
 
 
