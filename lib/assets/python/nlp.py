@@ -41,6 +41,10 @@ final=list(set(final))
 
 print(final) 
 
+from textblob import Word
+word = Word("octopus")
+print(Word("octopus").definitions)
+
 for i in final:
     syns = wordnet.synsets(i)
     print(i+" : "+syns[0].definition()+"\n")
