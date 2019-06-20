@@ -4,8 +4,9 @@ from nltk.corpus import wordnet
 print("ok")
 
 text = open("transcript.txt")
+print("ok")
 b=text.read()
-
+print("ok")
 tokens = nltk.word_tokenize(b)
 tagged = nltk.pos_tag(tokens)
 print(tokens)
