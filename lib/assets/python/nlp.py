@@ -27,12 +27,19 @@ with open('lib/assets/python/medical.txt') as file:
 
 filtered = [t for t in a if t[1] == "NN" or t[1] == "JJ"]
 
+print(filtered)
+
 new=[]
 for i in range(len(filtered)):
     new.append(filtered[i][0])
 
+
+print(new)
+
 final=[i for i in new if i in medical_list]
 final=list(set(final))
+
+print(final) 
 
 for i in final:
     syns = wordnet.synsets(i)
