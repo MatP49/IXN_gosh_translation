@@ -47,6 +47,4 @@ print("ok")
 
 for i in final:
 	word = Word(i)
-	print("ok")
-    defr = Word("octopus").definitions
-    print(i+": "+ defr + "\n")
+	print(Word("octopus").definitions)
