@@ -13,6 +13,38 @@ class RecordsController < ApplicationController
   def listen
   end
 
+  def result
+    @definitions = ""
+    file = File.open("definitions.txt", "r")
+    file.each do |definition|
+      @definitions += definition
+    end
+    @definitions_array = @definitions.split("deletethis")
+    file.close
+
+    @transcript_text = ""
+    file_transcript = File.open("transcript.txt", "r")
+    file_transcript.each do |x|
+      @transcript_text += x
+    end
+    file_transcript.close
+    @wo_delete_this_definitions = @definitions.gsub! 'deletethis', '\n'
+
+    @email = ""
+    file_email = File.open("email.txt", "r")
+    file_email.each do |x|
+      @email += x
+
+    end
+    file_email.close
+    @email_final = @email.delete!("\n")
+
+    UserMailer.email_to_send(@email_final).deliver_now
+
+  
+    
+  end
+
   # GET /records/1
   # GET /records/1.json
   def show
@@ -31,7 +63,7 @@ class RecordsController < ApplicationController
   # POST /records.json
   def create
 
-
+   
     @record = Record.new(record_params)
     @name = @record.name
     @record.transcript = @record.transcript.gsub(@name, 'John Doe')
@@ -39,6 +71,24 @@ class RecordsController < ApplicationController
 
     file = File.open("transcript.txt", "w")
     file.puts @record.transcript
+    file.close
+
+     @language = @record.language
+
+
+    file = File.open("language.txt", "w")
+    file.puts @record.language
+    file.close
+
+    @email = @record.email
+
+    file = File.open("email.txt", "w")
+    file.puts @record.email
+    file.close
+
+
+    file = File.open("language.txt", "w")
+    file.puts @record.language
     file.close
 
 
@@ -88,6 +138,6 @@ class RecordsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def record_params
-      params.require(:record).permit(:email, :name, :transcript)
+      params.require(:record).permit(:email, :name, :transcript, :language)
     end
 end

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'records/listen', to: 'records#listen'
+  get 'records/result', to: 'records#result'
   resources :records
   devise_for :users
   root to: 'pages#home'
