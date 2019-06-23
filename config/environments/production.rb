@@ -114,7 +114,9 @@ user_name:            'testbabelucl@gmail.com',
 password:             'sfnnmujufpnwsldd',
 authentication:       'plain',
 enable_starttls_auto: true  
-SMTP_OPENSSL_VERIFY_MODE=none
+smtp_openssl_verify_mode: ‘none’
+
+
 }
 
 end
