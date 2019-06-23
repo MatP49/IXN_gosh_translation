@@ -3,17 +3,4 @@
     this is a test<br>
   </p>
 
-
-<%= @summary = ""
-    summary = File.open("transcript.txt", "r")
-    file_transcript.each do |x|
-    @summary += x
-    summary = File.open("definitions.txt", "r")
-    file_transcript.each do |x|
-    @summary += x
-    summary = File.open("translation.txt", "r")
-    file_transcript.each do |x|
-    @summary += x
-    puts @summary
-
-      %>
+<%= @transcript %>
