@@ -2,14 +2,6 @@ class UserMailer < ApplicationMailer
 default from: 'testbabelucl@gmail.com'
 
   def email_to_send(user)
-
-  	@transcript = ""
-    file_trans = File.open("transcript.txt", "r")
-    file_trans.each do |x|
-      @transcript += x
-    end
-    file_trans.close
-
   	user = "PATIENT"
   	@email = ""
     file_email = File.open("email.txt", "r")
