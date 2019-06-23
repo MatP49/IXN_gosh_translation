@@ -39,7 +39,6 @@ class RecordsController < ApplicationController
     file_email.close
     @email_final = @email.delete!("\n")
 
-    UserMailer.email_to_send(@email_final).deliver_now
 
   
     
