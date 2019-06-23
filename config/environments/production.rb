@@ -113,6 +113,8 @@ domain:               'https://babeluclx.herokuapp.com/',
 user_name:            'testbabelucl@gmail.com',
 password:             'sfnnmujufpnwsldd',
 authentication:       'plain',
-enable_starttls_auto: true  }
+enable_starttls_auto: true  
+SMTP_OPENSSL_VERIFY_MODE=none
+}
 
 end
