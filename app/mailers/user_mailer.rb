@@ -10,6 +10,20 @@ default from: 'testbabelucl@gmail.com'
     end
     file_trans.close
 
+    @def = ""
+    file_def= File.open("definitions.txt", "r")
+    file_def.each do |x|
+      @def += x
+    end
+    file_def.close
+
+    @transla = ""
+    file_transla= File.open("translation.txt", "r")
+    file_transla.each do |x|
+      @transla += x
+    end
+    file_def.close
+
 
   	user = "PATIENT"
   	@email = ""
