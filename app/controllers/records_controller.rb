@@ -1,6 +1,4 @@
 class RecordsController < ApplicationController
-
-  require 'tokenizer'
   
   before_action :set_record, only: [:show, :edit, :update, :destroy]
 
@@ -19,7 +17,6 @@ class RecordsController < ApplicationController
     file.each do |definition|
       @definitions += definition
     end
-    @definitions_array = @definitions.split("deletethis")
     file.close
 
     @transcript_text = ""
@@ -28,7 +25,6 @@ class RecordsController < ApplicationController
       @transcript_text += x
     end
     file_transcript.close
-    @wo_delete_this_definitions = @definitions.gsub! 'deletethis', '\n'
 
     @email = ""
     file_email = File.open("email.txt", "r")

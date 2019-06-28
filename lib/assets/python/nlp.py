@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-print("ok")
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
@@ -11,14 +10,11 @@ b=text.read()
 
 
 
-print("ok")
 
 tokens = TextBlob(b)
 a= tokens.tags
 with open('lib/assets/python/medical.txt') as file:
     medical_list = [i.strip() for i in file]
-
-print("ok")
 
 filtered = [t for t in a if t[1] == "NN" or t[1] == "JJ"]
 
@@ -35,23 +31,26 @@ final=list(set(final))
 
 from textblob import Word
 
-print("ok")
 
 
 text2=[]
 for i in final:
-	word = Word(i).definitions
-	print(Word(i).definitions)
+	word = Word(i).definitions[0]
+	text2.append(i)
+	text2.append(": ")
 	text2.append(word)
+	text2.append("\n")
+	text2.append("\n")
 
 text_def=""
 for i in text2:
 	for j in i:
 
-		text_def = text_def + " deletethis " + j 
-text_def_final = text_def[12:]
+		text_def = text_def + j 
+#text_def_final = text_def[12:]
 
-print("ok")
+
+text_def_final = text_def
 
 
 with open("definitions.txt", "w") as myfile:
@@ -60,12 +59,10 @@ with open("definitions.txt", "w") as myfile:
 
 myfile.close()
 
-print("ok")
 
 text3 = open("language.txt")
 l=text3.read()
 lang=l.strip()
-print(l)
 
 
 from googletrans import Translator
@@ -86,19 +83,16 @@ with open("translation.txt", "w") as myfile2:
 	myfile2.write(tf4 + "\n" + tf5)
 myfile2.close()
 
-print("ok")
 
 text6 = open("translation.txt")
 t6=text6.read()
 translations = translator.translate([t6], dest=lang)
 
-print("ok")
 
 text_def=""
 for translation in translations:
     text_def+=translation.text
 
-print("ok")
 print(text_def)
 
 

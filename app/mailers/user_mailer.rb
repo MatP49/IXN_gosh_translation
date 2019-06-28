@@ -16,6 +16,7 @@ default from: 'testbabelucl@gmail.com'
       @def += x
     end
     file_def.close
+    @def_final= @def.gsub! 'deletethis', '\n'
 
     @transla = ""
     file_transla= File.open("translation.txt", "r")
