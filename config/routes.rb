@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'records/listen', to: 'records#listen'
   get 'records/result', to: 'records#result'
   resources :records

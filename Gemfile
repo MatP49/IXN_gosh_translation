@@ -11,6 +11,15 @@ gem 'redis'
 gem 'pragmatic_tokenizer'
 gem 'tokenizer', '~> 0.1.0'
 gem 'easy_translate'
+gem 'rails_admin', github: 'sferik/rails_admin'
+# Use github rack-pjax to fix dependency versioning issue with Rails 5
+# https://github.com/sferik/rails_admin/issues/2532
+gem 'rack-pjax', github: 'afcapel/rack-pjax'
+# Use forked remotipart until following issues are resolved
+# https://github.com/JangoSteve/remotipart/issues/139
+# https://github.com/sferik/rails_admin/issues/2532
+gem 'remotipart', '~> 1.2'
+
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'

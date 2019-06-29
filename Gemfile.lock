@@ -1,3 +1,29 @@
+GIT
+  remote: https://github.com/afcapel/rack-pjax.git
+  revision: c776a9a9eaa0641636e9ece5cfe88fc739339072
+  specs:
+    rack-pjax (0.8.0)
+      nokogiri (>= 1.5)
+      rack (>= 1.1)
+
+GIT
+  remote: https://github.com/sferik/rails_admin.git
+  revision: 043e187920ae771f35b52984926582555fc801c6
+  specs:
+    rails_admin (2.0.0.beta)
+      activemodel-serializers-xml (>= 1.0)
+      builder (~> 3.1)
+      coffee-rails (>= 4.0, < 6)
+      haml (>= 4.0, < 6)
+      jquery-rails (>= 3.0, < 5)
+      jquery-ui-rails (>= 5.0, < 7)
+      kaminari (>= 0.14, < 2.0)
+      nested_form (~> 0.3)
+      rack-pjax (>= 0.7)
+      rails (>= 5.0, < 7)
+      remotipart (~> 1.3)
+      sassc-rails (>= 1.3, < 3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -29,6 +55,10 @@ GEM
       globalid (>= 0.3.6)
     activemodel (5.2.3)
       activesupport (= 5.2.3)
+    activemodel-serializers-xml (1.0.2)
+      activemodel (> 5.x)
+      activesupport (> 5.x)
+      builder (~> 3.1)
     activerecord (5.2.3)
       activemodel (= 5.2.3)
       activesupport (= 5.2.3)
@@ -52,6 +82,13 @@ GEM
     builder (3.2.3)
     byebug (11.0.1)
     coderay (1.1.2)
+    coffee-rails (5.0.0)
+      coffee-script (>= 2.2.0)
+      railties (>= 5.2.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     devise (4.6.2)
@@ -74,10 +111,31 @@ GEM
       sassc (>= 1.11)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    haml (5.1.1)
+      temple (>= 0.8.0)
+      tilt
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
+    jquery-rails (4.3.5)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
+    jquery-ui-rails (6.0.1)
+      railties (>= 3.2.16)
+    kaminari (1.1.1)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.1.1)
+      kaminari-activerecord (= 1.1.1)
+      kaminari-core (= 1.1.1)
+    kaminari-actionview (1.1.1)
+      actionview
+      kaminari-core (= 1.1.1)
+    kaminari-activerecord (1.1.1)
+      activerecord
+      kaminari-core (= 1.1.1)
+    kaminari-core (1.1.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -94,6 +152,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     msgpack (1.2.10)
+    nested_form (0.3.2)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -144,6 +203,7 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     redis (4.1.2)
+    remotipart (1.4.3)
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
@@ -170,6 +230,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    temple (0.8.1)
     thor (0.20.3)
     thread (0.2.2)
     thread_safe (0.3.6)
@@ -212,8 +273,11 @@ DEPENDENCIES
   pry-byebug
   pry-rails
   puma
+  rack-pjax!
   rails (= 5.2.3)
+  rails_admin!
   redis
+  remotipart (~> 1.2)
   sassc-rails
   simple_form
   spring
@@ -226,3 +290,5 @@ DEPENDENCIES
 RUBY VERSION
    ruby 2.6.3p62
 
+BUNDLED WITH
+   2.0.2
