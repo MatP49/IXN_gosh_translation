@@ -136,4 +136,7 @@ class RecordsController < ApplicationController
     def record_params
       params.require(:record).permit(:email, :name, :transcript, :language)
     end
+
+
+
 end

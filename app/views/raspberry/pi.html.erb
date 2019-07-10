@@ -1,0 +1,20 @@
+<h1>Raspberry#pi</h1>
+
+<pre id="result"><%= result=`python3 lib/assets/python/raspberry.py`%> </pre>
+
+
+
+
+ <a href="/records/new" onclick="return copyDivToClipboard();" style="text-align:center">Start reviewing</a>
+
+<script type="text/javascript">
+ function copyDivToClipboard() {
+                    var range = document.createRange();
+                    range.selectNode(document.getElementById("result"));
+                    window.getSelection().removeAllRanges(); // clear current selection
+                    window.getSelection().addRange(range); // to select text
+                    document.execCommand("copy")
+                    window.getSelection().removeAllRanges();// to deselect
+
+                }
+</script>
