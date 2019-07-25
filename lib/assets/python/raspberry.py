@@ -2,16 +2,14 @@
 
 from urllib.request import urlopen
 import re
+from Crypto.Cipher import AES
+import base64
 
 html = urlopen("http://babelraspberry.ddns.net/")
 
-a1 = html.read().decode('utf-8')
-a2 = a1
+scraping = html.read().decode('utf-8')
 
+result = re.search('<h1>(.*)</h1>', scraping)
 
-result1 = re.search('<h1>(.*)</h1>', a1)
-result2 = re.search('<p>(.*)</p>', a2)
+print(result.group(1))
 
-
-print(result1.group(1))
-print(result2.group(1))

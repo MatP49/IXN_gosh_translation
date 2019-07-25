@@ -2,6 +2,8 @@
 
 <pre id="result"><%= result=`python3 lib/assets/python/raspberry.py`%> </pre>
 
+<pre id="result2"><%= result=`python3 lib/assets/python/raspberry2.py`%> </pre>
+
 
 
 
@@ -10,7 +12,7 @@
 <script type="text/javascript">
  function copyDivToClipboard() {
                     var range = document.createRange();
-                    range.selectNode(document.getElementById("result"));
+                    range.selectNode(document.getElementById("result2"));
                     window.getSelection().removeAllRanges(); // clear current selection
                     window.getSelection().addRange(range); // to select text
                     document.execCommand("copy")
