@@ -5,10 +5,10 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :email, label: 'Write the email of the patient' %>
+    <%= f.input :email, label: 'Email of the patient' %>
 
 
-    <%= f.input :name, label: 'Write the name of the patient' %>
+    <%= f.input :name, label: 'Name of the patient' %>
 
     <%= f.input :language, :collection => [['afrikaans','af'], [ 'albanian','sq' ], [ 'amharic','am' ], ['arabic', 'ar'], [ 'armenian','hy'], [  'azerbaijani','az'],
       ['basque','eu' ], ['belarusian','be'], [ 'bengali','bn'], ['bosnian','bs'], ['bulgarian',"bg"], [ 'catalan','ca'],
@@ -29,9 +29,9 @@
       [ 'ukrainian','uk'], [ 'urdu','ur'], ['uzbek','uz'], ['vietnamese','vi'], [  'welsh',    'cy'], [  'xhosa', 'xh'],
       [   'yiddish',  'yi'], ['yoruba','yo'], ['zulu','zu']
 
-    ], label: 'Choose the language you want to translate to' %>
+    ], label: 'Target language for translation' %>
 
-    <%= f.input :transcript, label: 'Remeber to click CTRL+V --- TRANSCRIP' %>
+    <%= f.input :transcript, label: 'Transcript (please press ctrl + v)' %>
   </div>
 
   <div class="form-actions">
@@ -39,12 +39,4 @@
   </div>
 <% end %>
     
-   
-    
-   
-   
-    
-   
-    
-    
-}
+  
