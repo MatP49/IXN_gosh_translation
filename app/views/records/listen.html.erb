@@ -16,14 +16,14 @@
     
     </div>
     <div class="text-center align-self-center col-sm-4">
-     <button onclick="start()"  style="margin:auto;display:block"> <%= image_tag "play.png",  width: "60%", class: "mx-auto d-block", :alt => "avatar" %></button>
+     <button onclick="reco()"  style="margin:auto;display:block"> <%= image_tag "play.png",  width: "60%", class: "mx-auto d-block", :alt => "avatar" %></button>
     </div>
    
 
 
     <div class="text-center align-self-center col-sm-4" >
        
-        <a href="/records/new" onclick="return copyDivToClipboard();" class="btn btn-primary btn-lg">Start reviewing</a>
+        <a href="/records/new" onclick="return recocopy();" class="btn btn-primary btn-lg">Start reviewing</a>
         
 
 
@@ -34,9 +34,11 @@
 
 
 
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,400i&display=swap" rel="stylesheet">
 
         
-        <div type="text" id="result"></div>
+        <div style="font-family: 'Ubuntu', sans-serif;"
+type="text" id="data" align="center"></div>
       
 
 
@@ -49,47 +51,41 @@
 
 
 
-        <script type="application/javascript">
-            function start(){
-                var r = document.getElementById("result");
+        <script>
+
+            function reco(){
+
+                var result = document.getElementById("data");
+
             if("webkitSpeechRecognition" in window){
-                var speechRecognizer = new webkitSpeechRecognition();
-                speechRecognizer.continuous = true;
-                speechRecognizer.interimResults = true;
-                speechRecognizer.lang = "en-US";
-                speechRecognizer.start();
+                var textt = new webkitSpeechRecognition();
+                textt.continuous = true;
+                textt.interimResults = true;
+                textt.lang = "en-US";
+                textt.start();
                 
-                var finalTranscripts = "";
-                speechRecognizer.onresult = function(event){
-                    var interimTranscripts = "";
-                    for(var i=event.resultIndex; i<event.results.length; i++){
-                        var transcript = event.results[i][0].transcript;
-                        transcript.replace("\n", "<br>");
-                        if(event.results[i].isFinal){
-                            finalTranscripts += transcript;
-                        }
-                        else{
-                            interimTranscripts += transcript;
-                        }
-                        r.innerHTML = finalTranscripts + '<span style="color: #999;">' + interimTranscripts + '</span>';
+                var lastversion = "";
 
-                    }
-                };
-                speechRecognizer.onerror = function(event){
-                };
-            }
-            else{
-                r.innerHTML = "Your browser does not support that.";
-            }
-            }
+                textt.onresult = function(event){
 
-       function copyDivToClipboard() {
-                    var range = document.createRange();
-                    range.selectNode(document.getElementById("result"));
-                    window.getSelection().removeAllRanges(); // clear current selection
-                    window.getSelection().addRange(range); // to select text
+                    var midversion = "";
+                    for(var k=event.resultIndex; k<event.results.length; k++){
+                        var datum = event.results[k][0].transcript;
+
+                        datum.replace("\n", "<br>");
+                        if(event.results[k].isFinal){lastversion += datum;}
+                        else{ midversion += datum; }
+                        result.innerHTML = lastversion + '<span style="color: #999; font-size: 24pt">' + midversion + '</span>';} };
+                textt.onerror = function(event){};}
+            else{ result.innerHTML = "Sorry, please use Google Chrome";} }
+
+       function recocopy() {
+                    var select = document.createRange();
+                    select.selectNode(document.getElementById("data"));
+                    window.getSelection().removeAllRanges(); 
+                    window.getSelection().addRange(select); 
                     document.execCommand("copy")
-                    window.getSelection().removeAllRanges();// to deselect
+                    window.getSelection().removeAllRanges();
 
                 }
 
