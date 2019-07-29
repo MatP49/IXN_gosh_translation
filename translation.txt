@@ -1,2 +1,1 @@
-patient
-patient: a person who requires medical care
+John Doe

@@ -1,2 +1,0 @@
-patient: a person who requires medical care
-
