@@ -1,7 +1,7 @@
 
 <h2></h2>
 
- <a href="/raspberry/pi"><%= image_tag "rasp.png",  width: "5%" %></a>
+ <a href="/raspberry/pi"><%= image_tag "rasp.png",  width: "5%", :alt => "Raspberry", class: "img-fluid" %></a>
 <h1 id="myHeader" style="font-family: 'Lobster', cursive;", serif;> Speech recognition </h1>
 
 <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     
     </div>
     <div class="text-center align-self-center col-sm-4">
-     <button onclick="reco()"  style="margin:auto;display:block"> <%= image_tag "play.png",  width: "60%", class: "mx-auto d-block", :alt => "avatar" %></button>
+     <button onclick="reco()"  style="margin:auto;display:block"> <%= image_tag "play.png",  width: "60%", class: "mx-auto d-block", :alt => "play" %></button>
     </div>
    
 
@@ -53,6 +53,8 @@ type="text" id="data" align="center"></div>
 
         <script>
 
+
+
             function reco(){
 
                 var result = document.getElementById("data");
@@ -78,6 +80,15 @@ type="text" id="data" align="center"></div>
                         result.innerHTML = lastversion + '<span style="color: #999; font-size: 24pt">' + midversion + '</span>';} };
                 textt.onerror = function(event){};}
             else{ result.innerHTML = "Sorry, please use Google Chrome";} }
+
+
+
+
+
+
+
+
+
 
        function recocopy() {
                     var select = document.createRange();
