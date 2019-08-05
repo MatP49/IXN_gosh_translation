@@ -1,1 +1,74 @@
-John Doe
+Technology foar prestaasjetests brûkt ien of meardere PC's as Unix-tsjinners om as ynjeksjers te fungearjen, elk emulearje fan 'e oanwêzigens fan oantal brûkers en elk draait in automatyske sekwinsje fan ynteraksjes (opnommen as in skript, as in searje skripts om ferskillende soarten brûkers te emulearjen) ynteraksje) mei de host waans prestaasje wurdt hifke. Normaal fungeart in aparte PC as testdirigint, koördineart en sammelt metriken fan elk fan 'e ynjeksjers en sammelt prestaasjesgegevens foar rapportaasjedoelen. De gewoane sekwinsje is om de lading te ferheegjen: om te begjinnen mei in pear firtuele brûkers en it oantal yn 'e rin fan' e tiid te ferheegjen nei in foarútsteld maksimum. It testresultaat lit sjen hoe't de prestaasjes fariearje mei de lading, jûn as oantal brûkers vs. responstiid. Ferskate ark binne beskikber om sokke tests út te fieren. Ark yn dizze kategory útfiert normaal in suite testen dy't echte brûkers emulearje tsjin it systeem. Soms kinne de resultaten oddies iepenbierje, bgl. Dat hoewol de gemiddelde responstiid akseptabel kin wêze, binne der outliers fan in pear wichtige transaksjes dy't in soad langer nimme om te foltôgjen - iets dat kin wurde feroarsake troch ineffektive databankfraach, foto's, ensfh.
+
+Prestaasjetests kinne wurde kombineare mei stresstesting, om te sjen wat der bart as in akseptabele lading wurdt oerskreaun. Kriget it systeem? Hoe lang duorret it om te herstellen as in grutte lading wurdt fermindere? Soarget syn mislearring kollaterale skea?
+
+Modellen foar analytyske prestaasjes is in metoade om it gedrach fan in systeem yn in spreadsheet te modellen. It model wurdt fieding mei mjittingen fan easken foar transaksjebronnen (CPU, disk I / O, LAN, WAN), gewicht troch de transaksjemix (saaklike transaksjes per oere). De gewogen easken foar transaksje-boarne wurde tafoege om de easken foar oere-boarne te krijen en ferdield troch de kapasiteit fan 'e oere boarne om de boarne-loads te krijen. Mei de reaksjeformule (R = S / (1-U), R = responsetime, S = servicetime, U = load) kinne antwurdtiden wurde berekkene en kalibreerd mei de resultaten fan 'e prestaasjestests. Modellen fan analytyske prestaasjes kinne evaluearje fan ûntwerpopsjes en systeemgrutte basearre op feitlik as ferwachte saaklik gebrûk. It is dêrom folle rapper en goedkeaper dan prestaasjes testen, hoewol it in deeglik begryp nedich is fan 'e hardware platfoarms.
+fail: in hanneling dy't mislearret
+
+modellering: byldhoukeunst produsearre troch foarmjen
+
+ûntwerp: de akte fan wurkjen fan 'e foarm fan wat (lykas troch in skets te meitsjen, skets of plan)
+
+antwurd: in resultaat
+
+crash: in lûd resonant werhelle lûd
+
+gedrach: de aksje as reaksje fan iets (as in masine as stof) ûnder spesifisearre omstannichheden
+
+nûmer: it pân beset troch in som of totale of ûnbepaalde hoemannichte ienheden of yndividuen
+
+eigentlik: op it stuit besteande feitlik en net allinich potensjeel as mooglik
+
+gebrûk: de hanneling fan gebrûk
+
+stress: de relative promininsje fan in wurdlid as muzyknota (foaral oangeande stress of toanhichte)
+
+technology: de praktyske tapassing fan wittenskip op kommersje as yndustry
+
+folchoarder: (faaks meartal) in opdracht jûn troch in oermacht (bgl. in militêre of wetjouwers) dat moat wurde folge
+
+formule: in groep symboalen dy't in wiskundige ferklearring meitsje
+
+kapasiteit: kapasiteit om út te fieren as te produsearjen
+
+maksimum: de grutste mooglike kwantiteit
+
+ûnderpân: in befeiliging tasein foar de weromjefte fan in liening
+
+test: besykje wat derút te finen
+
+dirigint: de persoan dy't in muzikale groep liedt
+
+beskikber: te krijen of tagonklik en klear foar gebrûk as tsjinst
+
+automatisearre: automatysk meitsje as automatysk kontrolearje of operearje
+
+firtuele: feitlik sa wêze yn hast elts respekt
+
+ynteraksje: in wjersidige of wjersidige aksje; ynteraksje
+
+searjes: ferlykbere dingen yn 'e folchoarder pleatst as bart
+
+foarstelling: in dramatysk as muzikaal fermaak
+
+skiif: iets mei in rûne foarm dy't liket op in platte sirkelfoarmige plaat
+
+gemiddelde: in statistyk dy't de lokaasje fan in ferdieling beskriuwt
+
+gasthear: in persoan dy't gasten útnoadiget foar in sosjaal barren (lykas in feest yn syn of har eigen hûs) en dy't foar har ferantwurdlik is wylst se der binne
+
+tiid: in eksimplaar as ienmalige gelegenheid foar ien of oare eveneminten
+
+metoade: in manier om wat te dwaan, foaral in systematyske manier; implisearret in oarderlike logyske regeling (meast yn stappen)
+
+sekwinsje: seriële regeling wêryn dingen folgje yn logyske folchoarder as in weromkommend patroan
+
+grut: in kleangrutte foar in grutte persoan
+
+load: gewicht te dragen of oerbringe
+
+real: elk rasjonele of irrasjonele getal
+
+model: in hypotetyske beskriuwing fan in komplekse entiteit as proses
+
+oarsaak: eveneminten dy't de generative krêft leverje dy't de oarsprong is fan iets

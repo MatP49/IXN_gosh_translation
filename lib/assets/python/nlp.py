@@ -34,13 +34,23 @@ from textblob import Word
 
 
 text2=[]
-for i in final:
-	word = Word(i).definitions[0]
-	text2.append(i)
-	text2.append(": ")
-	text2.append(word)
-	text2.append("\n")
-	text2.append("\n")
+
+try :
+    for i in final:
+	    word = Word(i).definitions[0]
+	    text2.append(i)
+	    text2.append(": ")
+	    text2.append(word)
+	    text2.append("\n")
+	    text2.append("\n")
+except IndexError:
+    for i in final:
+        word = Word(i).definitions
+        text2.append(i)
+        text2.append(": ")
+        text2.append(word)
+        text2.append("\n")
+        text2.append("\n")
 
 text_def=""
 for i in text2:
