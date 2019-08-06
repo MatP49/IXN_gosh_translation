@@ -35,22 +35,24 @@ from textblob import Word
 
 text2=[]
 
-try :
-    for i in final:
-	    word = Word(i).definitions[0]
-	    text2.append(i)
-	    text2.append(": ")
-	    text2.append(word)
-	    text2.append("\n")
-	    text2.append("\n")
-except IndexError:
-    for i in final:
-        word = Word(i).definitions
+for i in final:
+    try:
+        word = Word(i).definitions[0]
         text2.append(i)
         text2.append(": ")
         text2.append(word)
         text2.append("\n")
         text2.append("\n")
+    except IndexError:
+        word = Word(i).definitions
+        text2.append(i)
+        text2.append(": ")
+        text2.append("sorry, the definition of this word is not currently available.")
+        text2.append("\n")
+        text2.append("\n")
+    
+
+    
 
 text_def=""
 for i in text2:
@@ -96,12 +98,18 @@ myfile2.close()
 
 text6 = open("translation.txt")
 t6=text6.read()
-translations = translator.translate([t6], dest=lang)
+try:
+	translations = translator.translate([t6], dest=lang)
+	text_def=""
+	for translation in translations:
+		text_def+=translation.text
 
-
-text_def=""
-for translation in translations:
-    text_def+=translation.text
+except:
+	text_def="Google transalate API is not available at the moment, please retry..."
+	with open("transcript.txt", "w") as myfile:
+		myfile.write(text_def)
+	with open("definitions.txt", "w") as myfile2:
+		myfile2.write(text_def)
 
 print(text_def)
 

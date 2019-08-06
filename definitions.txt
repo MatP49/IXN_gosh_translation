@@ -1,70 +1,74 @@
-failure: an act that fails
+acetaminophen: an analgesic for mild pain but not for inflammation; also used as an antipyretic; (Datril, Tylenol, Panadol, Phenaphen, Tempra, and Anacin III are trademarks of brands of acetaminophen tablets)
 
-modeling: sculpture produced by molding
+dose: a measured portion of medicine taken at any one time
 
-design: the act of working out the form of something (as by making a sketch or outline or plan)
+developing: processing a photosensitive material in order to make an image visible
 
-response: a result
+severe: intensely or extremely bad or unpleasant in degree or quality
 
-crash: a loud resonant repeating noise
+opioid: sorry, the definition of this word is not currently available.
 
-behaviour: the action or reaction of something (as a machine or substance) under specified circumstances
+generic: a wine that is a blend of several varieties of grapes with no one grape predominating; a wine that does not carry the name of any specific grape
 
-number: the property possessed by a sum or total or indefinite quantity of units or individuals
-
-actual: presently existing in fact and not merely potential or possible
-
-use: the act of using
-
-stress: the relative prominence of a syllable or musical note (especially with regard to stress or pitch)
-
-technology: the practical application of science to commerce or industry
-
-order: (often plural) a command given by a superior (e.g., a military or law enforcement officer) that must be obeyed
-
-formula: a group of symbols that make a mathematical statement
-
-capacity: capability to perform or produce
+vein: a blood vessel that carries blood from the capillaries toward the heart
 
 maximum: the largest possible quantity
 
-collateral: a security pledged for the repayment of a loan
+medication: (medicine) something that treats or prevents or alleviates the symptoms of disease
 
-test: trying something to find out about it
+significant: important in effect or meaning
 
-conductor: the person who leads a musical group
+failure: an act that fails
+
+mouth: the opening through which food is taken in and vocalizations emerge
+
+relief: the feeling that comes when something burdensome is removed or reduced
+
+many: a quantifier that can be used with count nouns and is often preceded by `as' or `too' or `so' or `that'; amounting to a large but indefinite number
+
+adult: a fully developed person from maturity onward
+
+pain: a symptom of some physical hurt or disorder
+
+liver: large and complicated reddish-brown glandular organ located in the upper right portion of the abdominal cavity; secretes bile and functions in metabolism of protein and carbohydrate and fat; synthesizes substances involved in the clotting of the blood; synthesizes vitamin A; detoxifies poisonous substances and breaks down worn-out erythrocytes
+
+effective: producing or capable of producing an intended result or having a striking effect; -LewisMumford
+
+disease: an impairment of health or a condition of abnormal functioning
+
+analgesic: a medicine used to relieve pain
+
+mixed: mix together different elements
+
+use: the act of using
+
+combination: a collection of things that have been combined; an assemblage of separate parts or qualities
+
+skin: a natural protective body covering and site of the sense of touch
+
+used: put into service; make work or employ for a particular purpose or for its inherent or natural purpose
+
+cancer: any malignant growth or tumor caused by abnormal and uncontrolled cell division; it may spread to other parts of the body through the lymphatic system or the blood stream
+
+fever: a rise in the temperature of the body; frequently a symptom of infection
+
+daily: a newspaper that is published every day
+
+injection: the forceful insertion of a substance under pressure
+
+pregnancy: the state of being pregnant; the period from conception to birth when a woman carries a developing fetus in her uterus
+
+safe: strongbox where valuables can be safely kept
+
+activity: any specific behavior
+
+cold: a mild viral infection involving the nose and respiratory passages (but not the lungs)
 
 available: obtainable or accessible and ready for use or service
 
-automated: make automatic or control or operate automatically
+surgery: the branch of medical science that treats disease or injury by operative procedures
 
-virtual: being actually such in almost every respect
+toxicity: the degree to which something is poisonous
 
-interaction: a mutual or reciprocal action; interacting
-
-series: similar things placed in order or happening one after another
-
-performance: a dramatic or musical entertainment
-
-disk: something with a round shape resembling a flat circular plate
-
-average: a statistic describing the location of a distribution
-
-host: a person who invites guests to a social event (such as a party in his or her own home) and who is responsible for them while they are there
-
-time: an instance or single occasion for some event
-
-method: a way of doing something, especially a systematic way; implies an orderly logical arrangement (usually in steps)
-
-sequence: serial arrangement in which things follow in logical order or a recurrent pattern
-
-large: a garment size for a large person
-
-load: weight to be borne or conveyed
-
-real: any rational or irrational number
-
-model: a hypothetical description of a complex entity or process
-
-cause: events that provide the generative force that is the origin of something
+clear: the state of being free of suspicion
 
