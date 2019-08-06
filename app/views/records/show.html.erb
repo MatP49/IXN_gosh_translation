@@ -23,24 +23,23 @@
 
 
 <script language="JavaScript" type="text/javascript">
-var seconds =5;
-var url="https://babeluclx.herokuapp.com/records/result";
+var time =3;
+var link="https://babeluclx.herokuapp.com/records/result";
 
-function redirect(){
- if (seconds <=0){
- // redirect to new url after counter  down.
-  window.location = url;
+function linkto(){
+ if (time <=0){
+  window.location = link;
  }else{
-  seconds--;
-  document.getElementById("pageInfo").innerHTML = "redirect after "+seconds+" seconds."
-  setTimeout("redirect()", 1000)
+  time--;
+  document.getElementById("placeholder").innerHTML = "redirection in "+time+" seconds."
+  setTimeout("linkto()", 1000)
  }
 }
 </script>
 
-<div id="pageInfo">
+<div id="placeholder">
 <script>
- redirect();
+ linkto();
 </script>
 
 

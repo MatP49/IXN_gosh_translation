@@ -1,22 +1,28 @@
-<h1>Raspberry#pi</h1>
+<h1></h1>
+
+<h1 id="myHeader" style="font-family: 'Lobster', cursive;", serif;> Raspberry pi</h1>
+
+<link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
 
 <pre id="result"><%= result=`python3 lib/assets/python/raspberry.py`%> </pre>
 
-<pre id="result2"><%= result=`python3 lib/assets/python/raspberry2.py`%> </pre>
+<pre id="data"><%= result=`python3 lib/assets/python/raspberry2.py`%> </pre>
 
 
+<center>
+	
+	 <a href="/records/new" onclick="return recocopy();" style="text-align:center" class="btn btn-primary btn-lg">Start reviewing</a>
 
+</center>
 
- <a href="/records/new" onclick="return copyDivToClipboard();" style="text-align:center">Start reviewing</a>
 
 <script type="text/javascript">
- function copyDivToClipboard() {
-                    var range = document.createRange();
-                    range.selectNode(document.getElementById("result2"));
-                    window.getSelection().removeAllRanges(); // clear current selection
-                    window.getSelection().addRange(range); // to select text
+  function recocopy() {
+                    var select = document.createRange();
+                    select.selectNode(document.getElementById("data"));
+                    window.getSelection().removeAllRanges(); 
+                    window.getSelection().addRange(select); 
                     document.execCommand("copy")
-                    window.getSelection().removeAllRanges();// to deselect
-
-                }
+                    window.getSelection().removeAllRanges();
 </script>
