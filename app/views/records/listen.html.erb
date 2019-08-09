@@ -87,7 +87,7 @@ type="text" id="data" align="center"></div>
 
                         datum.replace("\n", "<br>");
                         if(event.results[k].isFinal){lastversion += datum;}
-                        else{ midversion += datum; }
+                        else{ midversion = datum; }
                         result.innerHTML = lastversion + '<span style="color: #999; font-size: 24pt">' + midversion + '</span>';} };
                 textt.onerror = function(event){};}
             else{ result.innerHTML = "Sorry, please use Google Chrome";} }
